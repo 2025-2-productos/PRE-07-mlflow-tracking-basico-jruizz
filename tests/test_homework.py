@@ -13,7 +13,7 @@ def test_01():
     try:
         for model in ["elasticnet", "knn"]:
             subprocess.run(
-                ["python3", "-m", "homework", "--model", model],
+                ["python", "-m", "homework", "--model", model],
                 check=True,
             )
     except subprocess.CalledProcessError as e:
