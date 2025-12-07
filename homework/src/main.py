@@ -26,15 +26,8 @@ def main():
         random_state=RANDOM_STATE,
     )
 
-    # model.fit(x_train, y_train)
-
-    # mse, mae, r2 = calculate_metrics(model, x_train, y_train)
-    # print_metrics("Training metrics", mse, mae, r2)
-
-    # mse, mae, r2 = calculate_metrics(model, x_test, y_test)
-    # print_metrics("Testing metrics", mse, mae, r2)
-
-    # save_model_if_better(model, x_test, y_test)
+    mlflow.set_tracking_uri("file:mlruns")
+    mlflow.set_experiment("wine_quality_experiment")
 
     ## Se inica la ejecución de MLflow
     mlflow.set_experiment("wine_quality_experiment")
